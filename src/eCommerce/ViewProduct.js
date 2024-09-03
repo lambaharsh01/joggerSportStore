@@ -18,6 +18,7 @@ import store from "../ReduxStore";
 
 function ViewProduct() {
   const navigate = useNavigate();
+  let params = useParams();
 
   const [login, setLogin] = useState(false);
   const [ifAddedToCart, setAddToCart] = useState(false);
@@ -70,10 +71,6 @@ function ViewProduct() {
     }
   }
 
-  let params = useParams();
-  // const navigate=useNavigate();
-
-  // CRAUSEL
   const carouselRef = useRef(null);
 
   const [crouselImg1, setCrouselImg1] = useState(null);
@@ -166,7 +163,7 @@ function ViewProduct() {
       setLoading(true);
       setLoaded(false);
     };
-  }, [product_id]);
+  }, [product_id, navigate]);
 
   useEffect(() => {
     if (store.getState().user_type === "admin") {

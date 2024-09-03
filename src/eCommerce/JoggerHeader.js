@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import axios from "axios";
 import moment from "moment";
 
@@ -16,7 +16,6 @@ import { ImCross } from "react-icons/im";
 import store from "../ReduxStore";
 
 import reduxHeader from "./ReduxHeaders";
-import { sub } from "date-fns";
 
 function JoggerHeader() {
   const navigate = useNavigate();
@@ -70,34 +69,7 @@ function JoggerHeader() {
 
   const [products, setProducts] = useState([]);
 
-  useEffect(() => {
-    document.body.style.background = "white";
-
-    var prevScrollpos = window.pageYOffset;
-    function handleScroll() {
-      var currentScrollPos = window.pageYOffset;
-
-      if (prevScrollpos > currentScrollPos || currentScrollPos < 50) {
-        if (document.getElementById("JoggerHeaderDiv"))
-          document.getElementById("JoggerHeaderDiv").style.top = "0";
-      } else {
-        if (document.getElementById("JoggerHeaderDiv"))
-          document.getElementById("JoggerHeaderDiv").style.top = "-90px";
-
-        setNewRelease1(false);
-        setNewRelease2(false);
-        setMen1(false);
-        setMen2(false);
-        setWomen1(false);
-        setWomen2(false);
-        setKids1(false);
-        setKids2(false);
-      }
-      prevScrollpos = currentScrollPos;
-    }
-
-    window.addEventListener("scroll", handleScroll);
-
+  const setInitialData = useCallback(() => {
     let previosStatus = store.getState().auth;
 
     axios
@@ -211,6 +183,39 @@ function JoggerHeader() {
           alert("something went wrong");
         });
     }
+  }, [navigate]);
+
+  useEffect(() => {
+    setInitialData();
+  }, [setInitialData]);
+
+  useEffect(() => {
+    document.body.style.background = "white";
+
+    var prevScrollpos = window.pageYOffset;
+    function handleScroll() {
+      var currentScrollPos = window.pageYOffset;
+
+      if (prevScrollpos > currentScrollPos || currentScrollPos < 50) {
+        if (document.getElementById("JoggerHeaderDiv"))
+          document.getElementById("JoggerHeaderDiv").style.top = "0";
+      } else {
+        if (document.getElementById("JoggerHeaderDiv"))
+          document.getElementById("JoggerHeaderDiv").style.top = "-90px";
+
+        setNewRelease1(false);
+        setNewRelease2(false);
+        setMen1(false);
+        setMen2(false);
+        setWomen1(false);
+        setWomen2(false);
+        setKids1(false);
+        setKids2(false);
+      }
+      prevScrollpos = currentScrollPos;
+    }
+
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -343,6 +348,7 @@ function JoggerHeader() {
             }}
           >
             <img
+              alt="icon"
               className="verySMallImg cursorPointer"
               src="/portfolio_images/jogger_main.png"
             />
@@ -1010,12 +1016,14 @@ function JoggerHeader() {
         <div className="modal-dialog" role="document">
           <div className="modal-content">
             <div className="modal-body p-0 ">
-              <ImCross
-                className="modal_cut_font_float text-dark me-3 mt-3  fs-4 "
-                onClick={() => setLogingOut(false)}
-              />
-
-              <h5 className="text-center mt-3 fw-bold">Confirm Logout</h5>
+              <div className=" w-100 text-start ms-3 position-relative">
+                <ImCross
+                  className="modal_cut_font_float text-dark fs-4 position-absolute top-0"
+                  onClick={() => setLogingOut(false)}
+                />
+                <h5 className="text-center mt-3 fw-bold">Confirm Logout</h5>
+              </div>
+              <hr />
 
               <div className="container-fluid">
                 <div className="row p-3">

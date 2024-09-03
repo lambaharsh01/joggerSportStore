@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 import "./Cart.css";
 import JoggerHeader from "./JoggerHeader";
@@ -9,9 +9,7 @@ import { FaPlus, FaMinus } from "react-icons/fa";
 import Swal from "sweetalert2";
 
 import Loader from "../Loader";
-import store from "../ReduxStore";
 import { useNavigate } from "react-router-dom";
-import { IoIosCart } from "react-icons/io";
 import { ImCross } from "react-icons/im";
 
 function Cart() {
@@ -38,28 +36,24 @@ function Cart() {
 
   const navigate = useNavigate();
 
-  useEffect(() => {
-    function getPriceAndSymbol(value) {
-      let product = { symbol: "", price: 0 };
-      if (value) {
-        for (let i = 0; i < value.length; i++) {
-          if (value[i] !== " ") {
-            if (isNaN(value[i])) {
-              product.symbol = value[i];
-            } else {
-              product.price = `${product.price}${value[i]}`;
-            }
+  function getPriceAndSymbol(value) {
+    let product = { symbol: "", price: 0 };
+    if (value) {
+      for (let i = 0; i < value.length; i++) {
+        if (value[i] !== " ") {
+          if (isNaN(value[i])) {
+            product.symbol = value[i];
+          } else {
+            product.price = `${product.price}${value[i]}`;
           }
         }
-        product.price = Number(product.price);
       }
-      return product;
+      product.price = Number(product.price);
     }
+    return product;
+  }
 
-    if (!store.getState().auth) {
-      navigate("/");
-    }
-
+  const getCartInfo = useCallback(() => {
     axios
       .get("/get_cart_details_per_user")
       .then((res) => {
@@ -121,20 +115,32 @@ function Cart() {
         setProductNames(
           res.data.products.map((element) => element.produt_name)
         );
-        // setProductNames()
       })
       .catch((err) => alert("Something went wrong"));
     setLoading(false);
     setLoaded(true);
-  }, []);
+  }, [
+    setCartProducts,
+    setProductPrices,
+    setProductTotalPrices,
+    setProductIds,
+    setProductNames,
+  ]);
 
   useEffect(() => {
+    getCartInfo();
+  }, [getCartInfo]);
+
+  const setTheSumPrice = useCallback(() => {
     setSumPrice(
       productTotalPrices.reduce((total, current) => {
         return total + current;
       }, 0)
     );
-  }, [dataRendering]);
+  }, [productTotalPrices]);
+  useEffect(() => {
+    setTheSumPrice();
+  }, [dataRendering, setTheSumPrice]);
 
   function validate() {
     let unSelectedSizes = 0;
@@ -381,7 +387,7 @@ function Cart() {
               <div className="modal-content">
                 <div className="modal-body p-0 ">
                   <ImCross
-                    className="modal_cut_font_float text-dark me-3 mt-3  fs-4 "
+                    className="modal_cut_font_float text-dark ms-3 mt-3  fs-4 "
                     onClick={() => setshow_modal(false)}
                   />
 
@@ -430,7 +436,7 @@ function Cart() {
                         </div>
                         <br />
                         <button
-                          className="btn btn-dark w-100 mb-2 rounded-pill"
+                          className="btn btn-dark w-100 mb-2 py-2 mb-3"
                           onClick={() => {
                             finalvalidation();
                           }}

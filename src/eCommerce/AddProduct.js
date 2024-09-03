@@ -2,7 +2,7 @@ import "./AddProduct.css";
 import JoggerHeader from "./JoggerHeader";
 import axios from "axios";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -24,11 +24,15 @@ import Footer from "./Footer";
 function AddProduct() {
   const navigate = useNavigate();
 
-  useEffect(() => {
+  const checkAdmin = useCallback(() => {
     if (store.getState().user_type !== "admin") {
       navigate("/");
     }
-  }, []);
+  }, [navigate]);
+
+  useEffect(() => {
+    checkAdmin();
+  }, [checkAdmin]);
 
   function setSecondDivsHeight() {
     const div1Height =
