@@ -612,7 +612,11 @@ function MainAdminDashboard() {
                 mainBackgroundClick();
               }}
             >
-              <img className="w-100" src={mainBackgroundImg} />
+              <img
+                alt="mainDashboard"
+                className="w-100"
+                src={mainBackgroundImg}
+              />
 
               <div className="icon_container_dashboard pe-5 pt-2">
                 <input
@@ -955,6 +959,7 @@ function MainAdminDashboard() {
 
                 <div className="featuredDiv">
                   <img
+                    alt="featured1"
                     src={featuredProduct1Img}
                     className="w-100 featured_image"
                   />
@@ -1085,6 +1090,7 @@ function MainAdminDashboard() {
 
                 <div className="featuredDiv">
                   <img
+                    alt="featured2"
                     src={featuredProduct2Img}
                     className="w-100 featured_image"
                   />

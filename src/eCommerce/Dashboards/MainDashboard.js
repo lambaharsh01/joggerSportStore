@@ -185,7 +185,11 @@ function MainDashboard() {
                 mainBackgroundClick();
               }}
             >
-              <img className="w-100" src={mainBackgroundImg} />
+              <img
+                alt="backgroundMain"
+                className="w-100"
+                src={mainBackgroundImg}
+              />
               <div
                 className="textInside ps-3 pb-3 pb-md-5"
                 style={{ color: mainBackgroundSubTextColor }}
@@ -246,6 +250,7 @@ function MainDashboard() {
                 <div className="col-sm-6 d-flex justify-content-center px-2 mb-4">
                   <div className="featuredDiv">
                     <img
+                      alt="featuredImage1"
                       src={featuredProduct1Img}
                       className="w-100 featured_image"
                     />
@@ -272,6 +277,7 @@ function MainDashboard() {
                 <div className="col-sm-6 d-flex justify-content-center px-2 mb-4">
                   <div className="featuredDiv">
                     <img
+                      alt="featuredImage2"
                       src={featuredProduct2Img}
                       className="w-100 featured_image"
                     />
