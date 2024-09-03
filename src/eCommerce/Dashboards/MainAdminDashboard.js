@@ -1,7 +1,7 @@
 import "./MainDashboard.css";
 import JoggerHeader from "../JoggerHeader";
 import { useState, useEffect, useRef } from "react";
-import { useNavigate, useParams, Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 
 import Loader from "../../Loader";
@@ -66,7 +66,7 @@ function MainAdminDashboard() {
     } else {
       refreshData();
     }
-  }, []);
+  }, [navigate]);
 
   function refreshData() {
     if (!true) {
@@ -155,7 +155,7 @@ function MainAdminDashboard() {
   const [zoom, setZoom] = useState(1);
 
   const [croppedArea, setCroppedArea] = useState(null);
-  const [aspectRatio, setAspectRatio] = useState(4 / 2);
+  const aspectRatio = useState(4 / 2);
 
   function handleInput(element) {
     if (element.currentTarget.files.length > 0) {
@@ -275,7 +275,7 @@ function MainAdminDashboard() {
       .catch((err) => {
         alert("something went wrong");
       });
-  }, []);
+  }, [navigate]);
 
   async function convertToFile(base64img) {
     if (base64img.includes("dashboard_pictures/")) {

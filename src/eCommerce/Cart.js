@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 
 import "./Cart.css";
 import JoggerHeader from "./JoggerHeader";
@@ -36,7 +36,7 @@ function Cart() {
       .catch((err) => alert("Something went wrong"));
     setLoading(false);
     setLoaded(true);
-  }, []);
+  }, [navigate]);
 
   async function removeFromCart(index, productId) {
     // console.log(index)

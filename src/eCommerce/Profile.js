@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 import "./Profile.css";
@@ -19,9 +19,9 @@ function Profile() {
     if (!store.getState().auth) {
       navigate("/");
     }
-  }, []);
+  }, [navigate]);
 
-  const [isLoading, setLoading] = useState(false);
+  const isLoading = useState(false);
 
   const [ordersIsOpen, setOrdersOpen] = useState(false);
   const [orderData, setOrderData] = useState(false);

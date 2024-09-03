@@ -1,7 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import Swal from "sweetalert2";
 import "./Signup.css";
 
 function Login() {
@@ -45,14 +44,17 @@ function Login() {
         window.location.href = "/";
       })
       .catch((err) => {
-        if (err.response.status == 404) {
+        if (err.response.status === 404 || err.response.status === "404") {
           setBackendResMessage("User Not Found");
           setBackendRes(true);
           setTimeout(() => {
             setBackendRes(false);
           }, 3200);
           // alert('not found');
-        } else if (err.response.status == 401) {
+        } else if (
+          err.response.status === 401 ||
+          err.response.status === "401"
+        ) {
           setBackendResMessage("Incorrect Password");
           setBackendRes(true);
           setTimeout(() => {
@@ -117,7 +119,7 @@ function Login() {
                 ref={passwordInput}
                 onChange={(elem) => {
                   setPassword(elem.currentTarget.value);
-                  if (elem.currentTarget.value.trim() != "") {
+                  if (elem.currentTarget.value.trim()) {
                     setPasswordValidation(false);
                   }
                 }}
@@ -146,7 +148,7 @@ function Login() {
 
                   validation++;
                 }
-                if (password.trim() == "") {
+                if (!password.trim()) {
                   setPasswordValidation(true);
                   validation++;
                 }

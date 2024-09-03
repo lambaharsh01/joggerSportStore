@@ -7,8 +7,6 @@ import axios from "axios";
 import Loader from "../../Loader";
 import Footer from "../Footer";
 
-import store from "../../ReduxStore";
-
 function MainDashboard() {
   const navigate = useNavigate();
 
@@ -51,8 +49,6 @@ function MainDashboard() {
 
   const [secondSliderSource, setSecondSliderSource] = useState(null);
   const [secondSlider, setSecondSlider] = useState([]);
-
-  const [adminAccess, setAdminAccess] = useState(false);
 
   const [mainBackgroundSubTextColor, setMainBackgroundSubTextColor] =
     useState(null);
@@ -117,10 +113,6 @@ function MainDashboard() {
 
         setLoading(false); //hiding the loaded after the request is completed
         setMainContentLoaded(true); //showing up the page's content when it is totally loaded
-
-        if (store.getState().user_type === "admin") {
-          setAdminAccess(true);
-        }
       })
       .catch((err) => {
         console.log(err);

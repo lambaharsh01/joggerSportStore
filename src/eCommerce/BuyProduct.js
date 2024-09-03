@@ -131,7 +131,7 @@ function BuyProduct() {
       setProductNumericDiscountPrice(null);
       setCurrency(null);
     };
-  }, []);
+  }, [params.productId]);
 
   async function addressValidation() {
     if (address === "") {

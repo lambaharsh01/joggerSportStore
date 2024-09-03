@@ -29,7 +29,7 @@ function Catagories() {
           navigate("/");
         });
     }
-  }, []);
+  }, [navigate]);
 
   function getHeaderData() {
     axios

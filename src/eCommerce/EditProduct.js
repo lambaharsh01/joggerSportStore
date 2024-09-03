@@ -30,7 +30,7 @@ function EditProduct() {
     if (store.getState().user_type !== "admin") {
       navigate("/");
     }
-  }, []);
+  }, [navigate]);
 
   const [loading, setLoading] = useState(true);
   const [mainContent, setMainContent] = useState(false);
