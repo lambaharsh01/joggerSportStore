@@ -1,0 +1,13 @@
+.unselectedButton{
+    background-color: rgb(201, 203, 203);
+    color: dark;
+    border-radius: 5px;
+    border: 0px solid;
+}
+
+.selectedButton{
+    background-color: rgb(72, 70, 70);
+    color: white;
+    border-radius: 5px;
+    border: 0px solid;
+}

@@ -1,0 +1,136 @@
+.cartProductDiv{
+    border-bottom: 1px solid lightgrey;
+}
+
+
+.cart_btn1{
+    margin-top: 15%;
+    width: 100%;
+    height: 50px;
+    background-color:solid white;
+    border: 0.3px solid ;
+    
+}
+
+.cart_select1{
+    margin-top: 15%;
+}
+.cart_selectSm{
+    height: 35px;
+}
+.cart_btn2{
+    margin-top: 15%;
+    width: 100%;
+    height: 50px;
+    background-color:solid black;
+}
+
+
+.buyCartButton{
+    position: fixed;
+    /* right: 0; */
+bottom: 0px;
+height: 60px;
+width: 100%;
+border-radius: 5px;
+background-color: black;
+color: white;
+font-size: 20px;
+    /* top: 95px; */
+    /* transition: top 0.3s ease-in-out;
+    z-index: 1;
+    background-color: lightgray;
+    margin-right: 5px;
+    border: 0.3px; */
+}
+
+
+
+.cartProductName{
+font-size: 25px;
+font-weight: 600;
+}
+.cartProductDiscription{
+    font-size: 18px;
+}
+
+.cartProductPrice{
+    font-weight: 600;
+    font-size: 18px;
+}
+.priceCut{
+    font-size: 12px;
+}
+
+
+.cart_btn1_sm{
+    width: 48%;
+}
+.cart_btn2_sm{
+    width: 48%;
+}
+
+
+.removeButton{
+    margin-top: 15%;
+    height: 40px;
+    width: 40px;
+}
+
+.addButton{
+    margin-top: 15%;
+    height:40px;
+    width:40px;
+}
+
+
+/* .removeButtonSm{
+    height: 40px;
+    width: 40px;
+}
+
+.addButtonSm{
+    height:40px;
+    width:40px;
+} */
+
+.quantityText{
+    margin-top: 15%;
+}
+
+
+
+.GrandTotal{
+    height: 65px;
+    position:fixed;
+    bottom: 0;
+    background-color: lightgray;
+    width: 100%;
+}
+
+
+.buyNowButton{
+    height: 40px;
+    font-size: 30px;
+  width: 100px;
+}
+
+@media (max-width: 576px){
+
+    .cartProductName{
+        font-size: 18px;
+        font-weight: 600;
+        }
+        .cartProductDiscription{
+            font-size: 14px;
+        }
+        
+        .cartProductPrice{
+            font-weight: 600;
+            font-size: 15px;
+        }
+        .priceCut h6{
+            font-size: 12px;
+        }
+        
+}

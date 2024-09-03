@@ -1,0 +1,42 @@
+
+.small_font_list{
+    font-size: 15px;
+    /* font-weight: 600; */
+    color: rgb(38, 38, 38);
+    margin-bottom: -10px;
+}
+
+
+.small_font_list_side{
+    font-size: 13px;
+    color: rgb(38, 38, 38);
+    margin-bottom: -10px;
+}
+
+
+
+
+.smaller_gray_font_list{
+    font-size: 12px;
+    font-weight: 500;
+    color: rgb(109, 108, 108);
+}
+.smaller_black_font_list{
+    font-size: 11px;
+    font-weight: 600;
+    color: black;
+}
+/* 
+
+.product_info1{
+height: 17px;
+}
+
+.product_info2{
+    height: 18px;
+} */
+
+
+.productDivMain{
+    padding-bottom: 30px;
+}

@@ -1,0 +1,132 @@
+
+::-webkit-scrollbar {
+    width: 8px; /* Set the width of the scrollbar */
+  }
+  
+
+.demo{
+    background-color: white;
+}
+
+
+.image{
+    width: 100%;
+    height: auto;
+}
+
+.carousel-control-next-icon{
+    display: none !important;
+}
+
+.carousel-control-prev-icon{
+    display: none !important;
+}
+.carousel-indicators{
+    display: none !important;
+}
+
+
+.crousal_bottom_direction{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: white;
+    font-size: 25px;
+}
+
+
+/* UPLOAD ICONS */
+.custom-carousel-item {
+    position: relative !important;
+}
+
+.icon-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    transform: translate(-50%, -50%);
+    color: rgba(0, 0, 0, 0.55); /* Set the color of your icon */
+    cursor: pointer;
+}
+
+.in_the_bottom_right{
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    color: rgba(0, 0, 0, 0.55); /* Set the color of your icon */
+    cursor: pointer;
+    padding-bottom: 10px;
+    padding-right: 20px;
+}
+.num_holder{
+    position: absolute;
+    top:0;
+    right:10px;
+    color: rgba(0, 0, 0, 0.55);
+    font-size: 25px;
+}
+
+
+.carousel-control-prev{
+    margin-bottom: 65px;
+}
+.carousel-control-next{
+    margin-bottom: 65px;
+}
+/* UPLOAD ICONS */
+
+
+/* MODAL */
+
+.moda_height_for_the_crop{
+    min-height:400px;
+}
+
+.moda_height_for_delete_confirmation{
+    min-height:150px;
+}
+
+.modal_cutBtn{
+    color:rgb(54, 54, 54);
+    float:right;
+  }
+  
+/* MODAL */
+
+/* PRODUCT INFO INPUTS */
+.product_info_input{
+    border-radius: 5px;
+    border: 1px solid;
+}
+.size_inputs{
+    width: 40px;
+}
+.small_cross{
+    font-size: 10px;
+    margin-bottom: 12px;
+    margin-left:5px ;
+}
+
+
+.input_lable{
+    font-size: 13px;
+}
+
+
+/* PRODUCT SPECIALITY SECTION */
+
+.speciality_image{
+    width: 100%;
+    height: auto;
+}
+
+
+
+@media (max-width: 576px){
+    .small_text_when_needed{
+        font-size: 12px;
+    }
+}
+
+  

@@ -1,0 +1,176 @@
+.outerDiv{
+    position: relative;
+}
+
+.textInside{
+    position:absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.textInside h1{
+    margin-left: 30px;
+    font-size: 60px;
+}
+.textInside span{
+    margin-left: 30px;
+    font-size: 25px;
+}
+
+
+.productSlider{
+    width: 100%;
+    white-space: nowrap;
+    position: relative;
+    overflow-x: scroll;
+}
+
+
+.scrolerImgDisplayDiv{
+    width: 300px;
+    float: none;
+    height: 90%;
+    margin: 10px;
+    display: inline-block;
+}
+
+
+
+
+
+
+
+.featuredDiv{
+    position: relative;
+}
+
+.featuredContent{
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+}
+
+.preLine{
+    white-space: pre-line;
+}
+
+
+
+.small_font{
+    font-size: 17px;
+    font-weight: 600;
+    color: black;
+}
+.smaller_gray_font{
+    font-size: 13px;
+    font-weight: 500;
+    color: rgb(109, 108, 108);
+}
+.smaller_black_font{
+    font-size: 13px;
+    font-weight: 600;
+    color: black;
+}
+
+
+.adminInputs{
+    border-radius: 5px;
+    border: 1px solid;
+}
+
+.mainContentHeader{
+    font-size: 50px;
+    background-color: transparent;
+
+}
+.mainSubCatagory{
+    font-size: 25px;
+    background-color: transparent;
+}
+
+
+.icon_container_dashboard{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 60px;
+}
+
+.uploadicon{
+    z-index: 40 !important;
+}
+
+
+.contetnMainDiv{
+    position: relative;   
+}
+
+.logoIfAdmin{
+    position: fixed;
+    z-index: 20;
+    right: 0px;
+    bottom: 0px;
+    padding-right: 10px;
+    font-size: 35px;
+}
+
+
+
+
+
+
+.searchInputDiv{
+    position: relative;
+}
+.searchedValues{
+    position:absolute !important;
+    z-index: 25 !important;
+    background-color: lightgray;
+
+}
+
+.searchedValues li{
+    list-style-type: none;
+    font-size: 13px;
+}
+
+
+
+
+
+
+@media (min-width: 576px) and (max-width: 768px){
+    .mainContentHeader{font-size: 30px;}
+    .mainSubCatagory{font-size: 20px;}
+}
+
+
+@media (min-width: 768px) and (max-width: 855px){
+    .mainContentHeader{font-size: 40px;}
+    .mainSubCatagory{font-size: 22px;}
+}
+
+
+
+@media (max-width: 576px){
+
+
+.scrolerImgDisplayDiv{
+    width: 220px;
+    float: none;
+    height: 90%;
+    margin: 10px;
+    display: inline-block;
+}
+
+
+    .textInside span{
+        font-size: 16px;
+        margin-left: 10px;
+    }
+    
+    .textInside h1{
+        font-size: 30px;
+        margin-left: 10px;
+    }
+}

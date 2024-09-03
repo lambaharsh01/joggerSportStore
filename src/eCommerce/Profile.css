@@ -1,0 +1,33 @@
+.accordion-header{
+    width: 100%;
+    background-color: whitesmoke;
+    height: 50px;
+}
+
+
+.radiousAll{
+    border-radius: 5px;
+}
+
+.radiousTop{
+    border-radius: 5px 5px 0px 0px;
+}
+.ordersButton{
+    font-size: 26px;
+    padding-left: 10px;
+    font-weight: 500;
+}
+
+.arrowIcon{
+    font-size: 30px;
+}
+
+
+.smallText{
+    font-size: 13px;
+}
+
+.unorderButton{
+    width: 100%;
+    height: 50px;
+}

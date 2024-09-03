@@ -1,0 +1,99 @@
+body{
+    background-color: aliceblue !important;
+}
+
+.row_sections{
+    border-radius: 20px;
+
+}
+.main_div{
+    border-radius: 20px;
+margin-top: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+}
+
+
+.div4{
+ background: white;
+
+}
+
+.sec_heading{
+    color:#57b846
+}
+
+/* inputs start */
+/* inputs start */
+.form-row {
+    position: relative;
+}
+
+.form-row-field {
+    position: absolute;
+    pointer-events: none;
+    transition: 0.5s;
+    top: 10px;
+
+    color: gray;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.text_input {
+    position: absolute;
+    top: 2px;
+    transition: 0.5s;
+    width: 95%;
+
+    border: none;
+    border-bottom: 2px solid lightgrey; 
+    outline: none;  
+}
+
+  
+
+.input_style{
+    border-bottom: 2px solid #57b846;
+}
+
+.input_style~label {
+    top: -13px;
+    font-size: 12px;
+    font-weight: 400;
+    
+}     
+/* inputs start end */
+/* inputs start end */
+
+
+.signUpButton{
+    background-color:#57b846;
+    border: none;
+    margin-bottom: 30px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+}
+.disabledSignUpButton{
+    background-color:lightgray;
+    border: none;
+    margin-bottom: 30px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.password_guideline{
+    font-size: 12px;
+}
+
+
+
+
+.li_light{
+    color: rgba(128, 128, 128, 0.797);
+    font-size: 15px;
+}
+.li_links{
+    color: #57b846;
+    text-decoration: none;
+}

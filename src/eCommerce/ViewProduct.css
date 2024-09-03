@@ -1,0 +1,199 @@
+
+
+
+
+::-webkit-scrollbar {
+    width: 8px; /* Set the width of the scrollbar */
+  }
+  
+
+.demo{
+    background-color: white;
+}
+
+
+.image{
+    width: 100%;
+    height: auto;
+}
+
+.carousel-control-next-icon{
+    display: none !important;
+}
+
+.carousel-control-prev-icon{
+    display: none !important;
+}
+.carousel-indicators{
+    display: none !important;
+}
+
+
+.crousal_bottom_direction{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: white;
+    font-size: 25px;
+}
+
+
+/* UPLOAD ICONS */
+.custom-carousel-item {
+    position: relative !important;
+}
+
+.icon-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    transform: translate(-50%, -50%);
+    color: rgba(0, 0, 0, 0.55); /* Set the color of your icon */
+    cursor: pointer;
+}
+
+.in_the_bottom_right{
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    color: rgba(0, 0, 0, 0.55); /* Set the color of your icon */
+    cursor: pointer;
+    padding-bottom: 10px;
+    padding-right: 20px;
+}
+.num_holder{
+    position: absolute;
+    top:0;
+    right:10px;
+    color: rgba(0, 0, 0, 0.55);
+    font-size: 25px;
+}
+
+
+.carousel-control-prev{
+    margin-bottom: 65px;
+}
+.carousel-control-next{
+    margin-bottom: 65px;
+}
+/* UPLOAD ICONS */
+
+
+/* MODAL */
+
+.moda_height_for_the_crop{
+    min-height:400px;
+}
+
+.modal_cutBtn{
+    color:rgb(54, 54, 54);
+    float:right;
+  }
+  
+/* MODAL */
+
+/* PRODUCT INFO INPUTS */
+.product_info_input{
+    border-radius: 5px;
+    border: 1px solid;
+}
+.size_inputs{
+    width: 40px;
+}
+.small_cross{
+    font-size: 10px;
+    margin-bottom: 12px;
+    margin-left:5px ;
+}
+
+
+.input_lable{
+    font-size: 13px;
+}
+
+
+/* PRODUCT SPECIALITY SECTION */
+
+.speciality_image{
+    width: 100%;
+    height: auto;
+}
+
+
+.product_name_sec{
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.product_priceHeader_sec{
+    font-size: 18px;
+    font-weight: 500;
+}
+.product_short_discription_sec{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.product_price_sec{
+    font-size: 17px;
+    font-weight: 600;
+}
+.discounted{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.sizeButtonProducts{
+    border: 1px solid black;
+    background-color: whitesmoke;
+    height: 40px;
+    width: 90px;
+    padding: 4px;
+    border-radius: 5px;
+}
+
+.sign_in_button{
+    font-size: 22px !important;
+    width: 100%;
+    height: 60px;
+}
+
+.add_to_cart_button{
+    font-size: 22px !important;
+    width: 100%;
+    height: 60px;
+    border: 1.5px solid darkgrey !important;
+}
+
+.briefDiscription{
+    white-space: pre-line;
+}
+
+.delete_guidelines li{
+font-size: 13px;
+}
+
+.gray_out{
+color: darkgray;
+}
+
+
+.extra_attr_sec_heading{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+@media (max-width: 576px){
+
+    .briefDiscription{
+        font-size: 13px;
+        padding-left: 5px;
+    }
+
+    .small_text_when_needed{
+        font-size: 12px;
+    }
+}
+
+  
